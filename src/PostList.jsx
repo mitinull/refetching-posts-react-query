@@ -3,14 +3,12 @@ import { getPosts } from "./posts";
 import { useRef } from "react";
 import ReactIcon from "./assets/react.svg";
 
-export function PostList() {
+export function PostList({ onClick }) {
   const {
     isLoading,
     isPending,
     isFetching,
     isSuccess,
-    isFetched,
-    failureReason,
     error,
     data,
     failureCount,
@@ -97,7 +95,8 @@ export function PostList() {
             {data.posts.map((post) => (
               <li
                 key={post.id}
-                className="text-sm rounded-sm py-2 px-5 bg-opacity-10 border border-gray-500"
+                onClick={() => onClick(post.title)}
+                className="text-blue-700 cursor-pointer text-sm rounded-sm py-2 px-5 bg-opacity-10 border border-gray-500"
               >
                 {post.title}
               </li>
