@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { getPostDetail, getUser } from "./posts";
 
 export function Post({ title, onBack }) {
