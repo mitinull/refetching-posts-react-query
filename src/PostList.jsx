@@ -133,7 +133,10 @@ export function PostList({ onClick }) {
                   checked={invalidate}
                   onChange={() => setInvalidate((p) => !p)}
                 />
-                <div className="text-sm">
+                <div
+                  className="text-sm cursor-pointer"
+                  onClick={() => setInvalidate((p) => !p)}
+                >
                   Refetch (Invalidate) After Success.
                 </div>
               </div>
@@ -143,7 +146,12 @@ export function PostList({ onClick }) {
                   checked={localChange}
                   onChange={() => setLocalChange((p) => !p)}
                 />
-                <div className="text-sm">Set Data Locally After Success.</div>
+                <div
+                  className="text-sm cursor-pointer"
+                  onClick={() => setLocalChange((p) => !p)}
+                >
+                  Set Data Locally After Success.
+                </div>
               </div>
             </div>
             <button
