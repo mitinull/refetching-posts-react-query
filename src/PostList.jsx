@@ -32,7 +32,7 @@ export function PostList({ onClick }) {
           console.log({ old });
           return {
             ...old,
-            posts: [...old.posts, { id: -1, title: "NEW POST!!!!" }],
+            posts: [...old.posts, { id: new Date(), title: "NEW POST!!!!" }],
           };
         });
       }
